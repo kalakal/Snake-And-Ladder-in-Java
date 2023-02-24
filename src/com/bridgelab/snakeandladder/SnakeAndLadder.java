@@ -1,15 +1,31 @@
 package com.bridgelab.snakeandladder;
+
 public class SnakeAndLadder {
     public static int checkSnakeLadder(int pos) {
         int position=pos;
         switch(position) {
-            case 1:
+            case 4:
                 position=14;
                 break;
-            case 2:
+            case 42:
                 position=42;
                 break;
-            case 3:
+            case 24:
+                position=84;
+                break;
+            case 78:
+                position=99;
+                break;
+            case 62:
+                position=19;
+                break;
+            case 49:
+                position=13;
+                break;
+            case 87:
+                position=36;
+                break;
+            case 98:
                 position=79;
                 break;
             default:
@@ -28,6 +44,10 @@ public class SnakeAndLadder {
             counter++;
             position=position+dice;
             position=checkSnakeLadder(position);
+            if (position>100) {
+                position=position-dice;
+
+            }
         }
         System.out.println("Player won the game");
         System.out.println("Player position  " +position);
